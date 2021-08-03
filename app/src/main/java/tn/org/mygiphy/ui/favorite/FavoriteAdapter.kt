@@ -1,39 +1,37 @@
-package tn.org.mygiphy.ui.trending
+package tn.org.mygiphy.ui.favorite
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import tn.org.mygiphy.databinding.TrendingItemLayoutBinding
+import tn.org.mygiphy.databinding.FavoriteItemLayoutBinding
 import tn.org.mygiphy.model.GifItem
 
-class TrendingAdapter(val ItemClick: (GifItem) -> Unit) :
-    PagingDataAdapter<GifItem, TrendingAdapter.TrendingViewHolder>(GifsTrendUtils) {
+class FavoriteAdapter(val ItemClick: (GifItem) -> Unit) :
+    ListAdapter<GifItem, FavoriteAdapter.FavoriteViewHolder>(GifsTrendUtils) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrendingViewHolder {
-        val binding = TrendingItemLayoutBinding.inflate(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
+        val binding = FavoriteItemLayoutBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
         )
-        return TrendingViewHolder(binding = binding)
+        return FavoriteViewHolder(binding = binding)
     }
 
-    override fun onBindViewHolder(holder: TrendingViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FavoriteViewHolder, position: Int) {
         val item = getItem(position)
         if (item != null) {
             holder.bind(item)
-            holder.binding.makeFavorite.setOnClickListener {
+            holder.binding.delete.setOnClickListener {
                 ItemClick(item)
-                item.isFavorite =  !item.isFavorite
-                notifyItemChanged(position)
             }
         }
     }
 
 
-    inner class TrendingViewHolder(val binding: TrendingItemLayoutBinding) :
+    inner class FavoriteViewHolder(val binding: FavoriteItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: GifItem) {

@@ -17,6 +17,7 @@
         android:padding="8dp">
 
         <ImageView
+            android:id="@+id/imageView"
             gif_url="@{item.url}"
             android:layout_width="140dp"
             android:layout_height="140dp"
@@ -33,12 +34,11 @@
             tools:text="@tools:sample/full_names" />
 
         <ImageView
-            android:id="@+id/make_favorite"
-            is_favorite="@{item.isFavorite}"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:src="@drawable/ic_not_favorite" />
+            android:src="@drawable/ic_delete" />
 
     </LinearLayout>
 

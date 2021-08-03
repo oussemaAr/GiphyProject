@@ -7,6 +7,16 @@
         <entry key="..\:/Users/user/Desktop/MyGiphy/app/src/main/res/layout/recycler_layout.xml" value="0.2609375" />
         <entry key="..\:/Users/user/Desktop/MyGiphy/app/src/main/res/layout/trending_item_layout.xml" value="0.2609375" />
         <entry key="..\:/Users/user/Desktop/MyGiphy/app/src/main/res/layout/trending_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/drawable/ic_download_image.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/drawable/ic_error.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/drawable/ic_favorite.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/drawable/ic_not_favorite.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/favorite_gif_layout.xml" value="0.35885416666666664" />
+        <entry key="app/src/main/res/layout/favorite_item_layout.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/trending_item_layout.xml" value="0.35333333333333333" />
+        <entry key="app/src/main/res/layout/trending_layout.xml" value="0.24790187217559717" />
       </map>
     </option>
   </component>
